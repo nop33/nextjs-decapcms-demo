@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: your-github-username/your-repo-name # Change to your GitHub repo
+  repo: nop33/nextjs-decapcms-demo # Change to your GitHub repo
   branch: main # Change if needed
   auth_scope: repo
   open_authoring: true # Allows GitHub users to contribute via authentication
@@ -10,7 +10,7 @@ publish_mode: editorial_workflow # Enables drafts and approvals
 media_folder: "public/images/uploads" # Where uploaded images are stored
 public_folder: "/images/uploads"
 
-site_url: "https://yourwebsite.com" # Your website URL
+site_url: "https://friendly-medovik-898c86.netlify.app" # Your website URL
 logo_url: "/images/logo.png" # Custom logo in the CMS login page
 
 # Configure how editors log in
