@@ -16,7 +16,7 @@ logo_url: "/images/logo.png" # Custom logo in the CMS login page
 # Configure how editors log in
 auth:
   provider: github
-  client_id: your-github-app-client-id # You'll set this up below
+  client_id: Ov23li6otqb3ybOO1J8M # You'll set this up below
   auth_endpoint: https://github.com/login/oauth/authorize
 
 collections:
