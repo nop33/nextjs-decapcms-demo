@@ -1,0 +1,35 @@
+backend:
+  name: github
+  repo: your-github-username/your-repo-name # Change to your GitHub repo
+  branch: main # Change if needed
+  auth_scope: repo
+  open_authoring: true # Allows GitHub users to contribute via authentication
+
+publish_mode: editorial_workflow # Enables drafts and approvals
+
+media_folder: "public/images/uploads" # Where uploaded images are stored
+public_folder: "/images/uploads"
+
+site_url: "https://yourwebsite.com" # Your website URL
+logo_url: "/images/logo.png" # Custom logo in the CMS login page
+
+# Configure how editors log in
+auth:
+  provider: github
+  client_id: your-github-app-client-id # You'll set this up below
+  auth_endpoint: https://github.com/login/oauth/authorize
+
+collections:
+  - name: "blog" # Used in routes, e.g., /admin/collections/blog
+    label: "Blog" # Used in the UI
+    folder: "content/blog/posts" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    preview_path: "/api/preview?secret=your-secret-token&slug={{slug}}"
+    fields: # The fields for each document, usually in front matter
+      - { label: "Layout", name: "layout", widget: "hidden", default: "blog" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Featured Image", name: "thumbnail", widget: "image" }
+      - { label: "Rating (scale of 1-5)", name: "rating", widget: "number" }
+      - { label: "Body", name: "body", widget: "markdown" }
